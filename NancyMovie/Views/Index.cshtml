@@ -1,0 +1,17 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase
+@{
+    Layout = "_Layout.cshtml";
+}
+
+@foreach(var item in Model.Movies) {
+    <div class="post">
+	    <h2 class="title"><a href="#">@item.Title</a></h2>
+	    <p class="meta"><span class="date">@item.DateReleased.ToString("dd/MM/yyyy")</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
+	    <div style="clear: both;">&nbsp;</div>
+	    <div class="entry">
+		    <p>Directed by @item.Director
+		    <p class="links"><a class="more" href="/home/edit/@item.Id">Edit</a><a class="more" rel="@item.Id" href="#">Delete</a></p>
+	    </div>
+    </div>    
+}
+<a href="/home/create">Create New</a>

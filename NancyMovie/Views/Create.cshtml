@@ -1,0 +1,46 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase
+@{
+    Layout = "_Layout.cshtml";
+}
+
+        <form action="/Home/Create" method="POST">
+
+            <fieldset>
+
+                <legend>Create a Movie</legend>
+
+                <p>
+
+                    <label for="Title">Title:</label>
+
+                    <input id="Title" name="Title"/> *
+
+                </p>
+
+                <p>
+
+                    <label for="Director">Director:</label>
+
+                    <input id="Director" name="Director"/> *
+
+                </p>
+
+                <p>
+
+                    <label for="DateReleased">DateReleased:</label>
+
+                    <input id="DateReleased" name="DateReleased"/> *
+
+                    
+
+                </p>
+
+                <p>
+
+                    <input type="submit" value="Create" />
+
+                </p>
+
+            </fieldset> 
+
+        </form>

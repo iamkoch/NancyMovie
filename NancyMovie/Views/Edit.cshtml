@@ -1,0 +1,46 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase
+@{
+    Layout = "_Layout.cshtml";
+}
+
+        <form action="/Home/Edit" method="POST">
+
+            <fieldset>
+
+                <legend>Edit</legend>
+                <input type="hidden" id="Id" name="Id" value="@Model.Id"/>
+                <p>
+
+                    <label for="Title">Title:</label>
+
+                    <input id="Title" name="Title" value="@Model.Title"/> *
+
+                </p>
+
+                <p>
+
+                    <label for="Director">Director:</label>
+
+                    <input id="Director" name="Director" value="@Model.Director"/> *
+
+                </p>
+
+                <p>
+
+                    <label for="DateReleased">DateReleased:</label>
+
+                    <input id="DateReleased" name="DateReleased" value="@Model.DateReleased"/> *
+
+                    
+
+                </p>
+
+                <p>
+
+                    <input type="submit" value="Save Changes" />
+
+                </p>
+
+            </fieldset> 
+
+        </form>
